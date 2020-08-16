@@ -116,11 +116,25 @@ button:hover.long-mins{
 .sound-picker button:nth-child(3) {
   background: rgb(119,136,153,0.2);
 }
+button:hover.sound-picker {
+  background: black
+}
+
+.vid-container {
+  overflow: hidden;
+}
 
 video {
-  position: fixed;
-  top: 0%;
-  left: 0%;
-  width: 100%;
-  z-index: -10;
+  position: absolute;
+  top: 50%; 
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  min-width: 100%; 
+  min-height: 100%; 
+  width: auto; 
+  height: auto;
+  z-index: -1000; 
+  overflow: hidden;
+
 }
