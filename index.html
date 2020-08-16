@@ -10,6 +10,7 @@
     <title>Audio App</title>
   </head>
   <body>
+      
     <div class="app">
 
       <div class="vid-container">
@@ -20,9 +21,9 @@
 
       <div class="time-select">
 
-        <button data-time="120">2:00</button>
-        <button data-time="300" class="medium-mins">5:00</button>
-        <button data-time="600" class="long-mins">10:00</button>
+        <button data-time="120" class="short-mins">2 min</button>
+        <button data-time="300" class="medium-mins">5 min</button>
+        <button data-time="600" class="long-mins">10 min</button>
 
       </div>
 
@@ -30,18 +31,15 @@
         <audio class="song">
           <source src="./sounds/rain.mp3" />
         </audio>
-        <div class="start">
         <button class="play">play</button>
-        </div>
-        <div class="restart">
-        <button class="replay"></p1>restart</button>
-        </div>
-        <h3 class="time-display">0:00</h3>      
+        <button class="time-display">0:00</button> 
+        <button class="replay">restart</button>
+
       </div>
 
       <div class="sound-picker">
         <button data-sound="./sounds/rain.mp3" data-video="./video/rain.mp4" ><img src="./svg/rain.svg" alt=""></button>
-        <button data-sound="./sounds/thunderstorm.mp3" data-video="./video/thunderstorm.mp4"><img src="./svg/beach.svg" alt=""></button>
+        <button data-sound="./sounds/thunderstorm.mp3" data-video="./video/thunderstorm.mp4"><img src="./svg/thunderstorm.svg" alt=""></button>
         <button data-sound="./sounds/beach.mp3" data-video="./video/beach.mp4"><img src="./svg/beach.svg" alt=""></button>
       </div>
 

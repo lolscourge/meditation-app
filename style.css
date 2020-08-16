@@ -23,7 +23,6 @@
 } 
 
 .player-container {
-  position: relative;
   height: 80%;
   display: flex;
   justify-content: space-evenly;
@@ -32,35 +31,47 @@
   flex: 1;
 }
 
-.time-select button, 
-.restart button,
-.start button {
+button.play,
+button.replay, 
+button.time-display,
+button.short-mins,
+button.medium-mins,
+button.long-mins {
   color: white;
   width: 30%;
   height: 10%;
   background: none;
   font-size: 20px;
   border-radius: 5px;
-  cursor: pointer;
   transition: all 0.5s ease;
   border: none;
   outline: none;
-}
-
-.time-select button,
-.restart button,
-.start button {
   border: none;
   height: 120px;
   width: 120px;
-  padding: 30px;
+  padding: 20px;
   outline: none;
+  font-family: "Montserrat", sans-serif;
 }
 
-.time-select button:hover,
-.restart button:hover,
-.start button:hover {
-  background: white;
+button.time-display {
+    font-size: 42px;
+    padding: 0
+}
+
+button.play,
+button.replay,
+button.short-mins,
+button.medium-mins,
+button.long-mins {
+    cursor: pointer}
+
+
+button:hover.play,
+button:hover.replay,
+button:hover.short-mins,
+button:hover.medium-mins,
+button:hover.long-mins{
   color: black;
   border: none;
   outline: none;
@@ -86,6 +97,8 @@
   padding: 30px;
   border-radius: 50%;
   margin: auto;
+  outline: none;
+  
 }
 
 .sound-picker button img {
@@ -95,19 +108,13 @@
   margin: auto;
 }
 .sound-picker button:nth-child(1) {
-  background: #4972a1;
+  background: rgb(119,136,153,0.2);
 }
 .sound-picker button:nth-child(2) {
-  background: #a14f49;
+  background: rgb(119,136,153,0.2);
 }
 .sound-picker button:nth-child(3) {
-  background: lightslategray;
-}
-
-.time-display {
-  color: white;
-  font-size: 50px;
-  bottom: 10%;
+  background: rgb(119,136,153,0.2);
 }
 
 video {
