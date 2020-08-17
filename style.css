@@ -1,63 +1,89 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    vertical-align: text-bottom
 }
-
 
 .app {
-  height: 100vh;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  font-family: "Montserrat", sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
 }
 
+/* background video and placement*/
+
+.vid-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1000;
+}
+
+video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    z-index: -1;
+}
+
+/* time-pick (2/5/10) + play + replay buttons, and countdown (a button that's not a button WeSmart)*/
+
 .time-select {
-  height: 80%;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-direction: column;
-  flex: 1;
-} 
+    height: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
+}
 
 .player-container {
-  height: 80%;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-direction: column;
-  flex: 1;
+    height: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
 }
 
 button.play,
-button.replay, 
+button.replay,
 button.time-display,
 button.short-mins,
 button.medium-mins,
 button.long-mins {
-  color: white;
-  width: 30%;
-  height: 10%;
-  background: none;
-  font-size: 20px;
-  border-radius: 5px;
-  transition: all 0.5s ease;
-  border: none;
-  outline: none;
-  border: none;
-  height: 120px;
-  width: 120px;
-  padding: 10px;
-  outline: none;
-  font-family: "Montserrat", sans-serif;
-
+    color: white;
+    background: none;
+    font-size: 20px;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+    border: none;
+    outline: none;
+    height: 120px;
+    width: 120px;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    font-family: "Montserrat", sans-serif;
+    line-height: 120px;
 }
 
-button.time-display {
+button.time-display /*don't judge me I used the button to help with the formatting*/ 
+{
     font-size: 42px;
-    padding: 0
 }
 
 button.play,
@@ -65,89 +91,71 @@ button.replay,
 button.short-mins,
 button.medium-mins,
 button.long-mins {
-  cursor: pointer}
-
+    cursor: pointer/* LMAO */;
+} 
 
 button:hover.play,
 button:hover.replay,
 button:hover.short-mins,
 button:hover.medium-mins,
-button:hover.long-mins{
-  color: black;
-  border: none;
-  outline: none;
+button:hover.long-mins {
+    color: black;
+    border: none;
+    outline: none;
 }
 
+/*sound picker with svg images and stuff and hoverable cool circle backgrounds 8]*/
+
 .sound-picker {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-direction: column;
-  height: 80%;
-  flex: 1;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    height: 80%;
+    flex: 1;
 }
 
 .sound-picker button {
-  color: white;
-  background: none;
-  font-size: 20px;
-  cursor: pointer;
-  border: none;
-  height: 100px;
-  width: 100px;
-  padding: 20px;
-  border-radius: 50%;
-  margin: auto;
-  outline: none;
-  background: rgb(119,136,153,0.2);
-  transition: 0.3s;
+    color: white;
+    background: none;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    height: 100px;
+    width: 100px;
+    padding: 20px;
+    border-radius: 50%;
+    margin: auto;
+    outline: none;
+    background: rgb(119, 136, 153, 0.2);
+    transition: 0.3s;
 }
 
 .sound-picker button img {
-  display: block;
-  height: auto;
-  width: 100%;
-  margin: auto;
+    display: block;
+    height: auto;
+    width: 100%;
+    margin: auto;
 }
+
+/* incase i decide to get funky with colours..*/
+
 .sound-picker button:nth-child(1) {
-  background: rgb(119,136,153,0.2);
-  transition: 0.3s;
+    background: rgb(119, 136, 153, 0.2);
+    transition: 0.3s;
 }
 .sound-picker button:nth-child(2) {
-  background: rgb(119,136,153,0.2);
-  transition: 0.3s;
+    background: rgb(119, 136, 153, 0.2);
+    transition: 0.3s;
 }
 
 .sound-picker button:nth-child(3) {
-  background: rgb(119,136,153,0.2);
-  transition: 0.3s;
+    background: rgb(119, 136, 153, 0.2);
+    transition: 0.3s;
 }
+
 .sound-picker button:nth-child(1):hover,
 .sound-picker button:nth-child(2):hover,
 .sound-picker button:nth-child(3):hover {
-  background: rgb(1, 16, 31,1);
-}
-
-.vid-container {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%; 
-  overflow: hidden;
-  z-index: -1000;
-}
-
-video {
-  position: absolute;
-  top: 50%; 
-  left: 50%;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-  min-width: 100%; 
-  min-height: 100%; 
-  width: auto; 
-  height: auto; 
-  overflow: hidden;
-  z-index: -1000;
+    background: rgb(1, 16, 31, 1);
 }
