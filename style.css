@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    vertical-align: text-bottom
 }
 
 .app {
@@ -11,6 +10,7 @@
     justify-content: space-evenly;
     align-items: center;
     font-family: "Montserrat", sans-serif;
+    overflow: hidden;
 }
 
 /* background video and placement*/
