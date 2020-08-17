@@ -49,9 +49,10 @@ button.long-mins {
   border: none;
   height: 120px;
   width: 120px;
-  padding: 20px;
+  padding: 10px;
   outline: none;
   font-family: "Montserrat", sans-serif;
+
 }
 
 button.time-display {
@@ -64,7 +65,7 @@ button.replay,
 button.short-mins,
 button.medium-mins,
 button.long-mins {
-    cursor: pointer}
+  cursor: pointer}
 
 
 button:hover.play,
@@ -94,11 +95,12 @@ button:hover.long-mins{
   border: none;
   height: 100px;
   width: 100px;
-  padding: 30px;
+  padding: 20px;
   border-radius: 50%;
   margin: auto;
   outline: none;
-  
+  background: rgb(119,136,153,0.2);
+  transition: 0.3s;
 }
 
 .sound-picker button img {
@@ -109,19 +111,31 @@ button:hover.long-mins{
 }
 .sound-picker button:nth-child(1) {
   background: rgb(119,136,153,0.2);
+  transition: 0.3s;
 }
 .sound-picker button:nth-child(2) {
   background: rgb(119,136,153,0.2);
+  transition: 0.3s;
 }
+
 .sound-picker button:nth-child(3) {
   background: rgb(119,136,153,0.2);
+  transition: 0.3s;
 }
-button:hover.sound-picker {
-  background: black
+.sound-picker button:nth-child(1):hover,
+.sound-picker button:nth-child(2):hover,
+.sound-picker button:nth-child(3):hover {
+  background: rgb(1, 16, 31,1);
 }
 
 .vid-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%; 
   overflow: hidden;
+  z-index: -1000;
 }
 
 video {
@@ -133,8 +147,7 @@ video {
   min-width: 100%; 
   min-height: 100%; 
   width: auto; 
-  height: auto;
-  z-index: -1000; 
+  height: auto; 
   overflow: hidden;
-
+  z-index: -1000;
 }
